@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import pokemonData from './utilities/pokemonData'
+import TrainersSideBar from './components/trainersSideBar/TrainersSideBar'
 import { PokemonContainer } from './components/pokemonContainer/PokemonContainer'
 
 class App extends Component {
@@ -8,7 +9,8 @@ class App extends Component {
     super();
     this.state = {
       pokemon: pokemonData,
-      counter: 0
+      counter: 0, 
+      
     }
   };
 
@@ -37,6 +39,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <TrainersSideBar />
         <PokemonContainer
           pokemon={this.state.pokemon}
           counter={this.state.counter}
