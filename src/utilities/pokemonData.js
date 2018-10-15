@@ -2,7 +2,7 @@ const pokemon = [
   {
     name: 'Charizard',
     type: 'fire',
-    img: '../../images/charizard.png',
+    img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/6.png",
     hp: 78,
     speed: 100,
     attack: 84,
@@ -11,7 +11,7 @@ const pokemon = [
   {
     name: 'Blastoise',
     type: 'water',
-    img: '../../images/blastoise.png',
+    img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/9.png",
     hp: 79,
     speed: 78,
     attack: 83,
@@ -20,7 +20,7 @@ const pokemon = [
   {
     name: 'Pikachu',
     type: 'Electric',
-    img: '../../images/pikachu.png',
+    img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png",
     hp: 35,
     speed: 90,
     attack: 55,
@@ -29,7 +29,7 @@ const pokemon = [
   {
     name: 'Kadabra',
     type: 'Psychic',
-    img: '../../images/kadabra.png',
+    img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/64.png",
     hp: 40,
     speed: 105,
     attack: 35,
@@ -38,7 +38,7 @@ const pokemon = [
   {
     name: 'Pidgeot',
     type: 'flying',
-    img: '../../images/pidgeot.png',
+    img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/18.png",
     hp: 83,
     speed: 101,
     attack: 80,
@@ -47,7 +47,7 @@ const pokemon = [
   {
     name: 'Gengar',
     type: 'ghost',
-    img: '../../images/gengar.png',
+    img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/94.png",
     hp: 60,
     speed: 110,
     attack: 65,
@@ -56,7 +56,7 @@ const pokemon = [
   {
     name: 'Gyarados',
     type: 'water',
-    img: '../../images/gyardos.png',
+    img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/130.png",
     hp: 95,
     speed: 81,
     attack: 125,
@@ -65,7 +65,7 @@ const pokemon = [
   {
     name: 'Dragonite',
     type: 'dragon',
-    img: '../../images/dragonite.png',
+    img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/149.png",
     hp: 91,
     speed: 80,
     attack: 134,
@@ -74,7 +74,7 @@ const pokemon = [
   {
     name: 'Mewtwo',
     type: 'psychic',
-    img: '../../images/mewtwo.png',
+    img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/150.png",
     hp: 106,
     speed: 130,
     attack: 110,
@@ -83,7 +83,7 @@ const pokemon = [
   {
     name: 'Zapados',
     type: 'electric',
-    img: '../../images/zapados.png',
+    img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/145.png",
     hp: 90,
     speed: 100,
     attack: 90,
