@@ -5,7 +5,7 @@ import TrainersSideBar from './components/trainersSideBar/TrainersSideBar'
 import { PokemonContainer } from './components/pokemonContainer/PokemonContainer'
 import { getTrainers, getPokemonTeams, postPokemonTeam, postTrainer, removeTrainer, removePokemonTeam } from './utilities/backendApiCalls/apiCalls'
 import { Header } from './components/header/header'
-import AddTrainer from './components/addTrainer/AddTrainer'
+import AddTrainer from './components/addTrainer/AddTrainer';
 
 class App extends Component {
   constructor() {
