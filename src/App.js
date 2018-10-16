@@ -3,8 +3,9 @@ import './App.css';
 import pokemonData from './utilities/pokemonData'
 import TrainersSideBar from './components/trainersSideBar/TrainersSideBar'
 import { PokemonContainer } from './components/pokemonContainer/PokemonContainer'
-import { getTrainers, getPokemonTeams, postPokemonTeam } from './utilities/backendApiCalls/apiCalls'
+import { getTrainers, getPokemonTeams, postPokemonTeam, postTrainer } from './utilities/backendApiCalls/apiCalls'
 import { Header } from './components/header/header'
+import AddTrainer from './components/addTrainer/AddTrainer'
 
 class App extends Component {
   constructor() {
@@ -15,7 +16,8 @@ class App extends Component {
       selectedPokemon: [],
       trainersTeams: [],
       trainers: [],
-      currentTrainer: {}
+      currentTrainer: {},
+      addTrainer: true
     }
   };
 
@@ -104,27 +106,43 @@ class App extends Component {
       selectedPokemon: []
     })
   }
+
+  addTrainer = async (trainer) => {
+    await postTrainer(trainer);
+    this.getTrainers();
+  }
   
   render() {
-    return (
-      <div className='full-page'>
-        <TrainersSideBar trainers={this.state.trainers} trainersTeams={this.state.trainersTeams}/>
-        <div className='main-section'>
-          <Header/>  
-          <PokemonContainer
-            pokemon={this.state.pokemon}
-            trainers={this.state.trainers}
-            selectedPokemon={this.state.selectedPokemon}
-            getCurrentTrainer={this.getCurrentTrainer}
-            addToPokemonTeam={this.addPokemonToTeam}
-            postTeam={this.postTeam}
-            deleteFromTeam={this.deleteFromTeam}
-            counter={this.state.counter}
-            increment={this.increment}
-            decrement={this.decrement}/>
+    if(this.state.addTrainer) {
+      return (
+        <div className='full-page'>
+          <TrainersSideBar trainers={this.state.trainers} trainersTeams={this.state.trainersTeams}/>
+          <div className='main-section'>
+            <AddTrainer addTrainer={this.addTrainer}/>
+          </div>  
         </div>
-      </div>
-    );
+      )
+    } else {
+      return (
+        <div className='full-page'>
+          <TrainersSideBar trainers={this.state.trainers} trainersTeams={this.state.trainersTeams}/>
+          <div className='main-section'>
+            <Header/>  
+            <PokemonContainer
+              pokemon={this.state.pokemon}
+              trainers={this.state.trainers}
+              selectedPokemon={this.state.selectedPokemon}
+              getCurrentTrainer={this.getCurrentTrainer}
+              addToPokemonTeam={this.addPokemonToTeam}
+              postTeam={this.postTeam}
+              deleteFromTeam={this.deleteFromTeam}
+              counter={this.state.counter}
+              increment={this.increment}
+              decrement={this.decrement}/>
+          </div>
+        </div>
+      );
+    }
   }
 }
 
