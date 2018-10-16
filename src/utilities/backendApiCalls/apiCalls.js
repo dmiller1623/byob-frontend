@@ -19,3 +19,19 @@ export const getPokemonTeams = async () => {
     throw new Error(error.message)
   }
 }
+
+export const postPokemonTeam = async (team) => {
+  try {
+    const response = await fetch('http://localhost:3000/api/v1/pokemon', {
+      method: "POST",
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(team)
+    })
+    console.log(response)
+  }
+  catch(error) {
+    throw new Error(error.message)
+  }
+} 
