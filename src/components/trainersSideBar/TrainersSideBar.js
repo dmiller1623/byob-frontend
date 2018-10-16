@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import './trainersSideBar.css'
+import Trainers from '../../images/Trainers.png'
 
 class TrainersSideBar extends Component {
   constructor(props) {
@@ -8,14 +10,18 @@ class TrainersSideBar extends Component {
   render() {
     const { trainersTeams, trainers } = this.props;
     return(
+      <div className='side-bar'>
+      <img className='trainer-header' src={Trainers} />
       <div>
         {trainers.map((trainer, index) => {
           const foundTeams = trainersTeams.filter((team, index) => {
             return trainer.id === team.trainer_id
           })
           return <div key={index}>
-            <h1>{trainer.name}</h1>
-            <h1>{trainer.level}</h1>
+          <div className='name-header'>
+            <h2>Name: <span>{trainer.name}</span></h2>
+            <h2>Level: <span>{trainer.level}</span></h2>
+          </div>
             {foundTeams.map((pokemon) => {
               return <div>
                 <img src={pokemon.pokemon_one}/>
@@ -28,6 +34,7 @@ class TrainersSideBar extends Component {
           </div>
         })}
       </div>
+    </div>
     )
   }
 }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './pokemonCard.css'
+import add from '../../images/Add.png'
+import stats from '../../images/Stats.png'
 
 class Pokemoncard extends Component {
   constructor(props) {
@@ -21,16 +23,23 @@ class Pokemoncard extends Component {
     const { name, type, img, speed, attack, defense, hp, addToPokemonTeam } = this.props;
 
     return(
-      <div 
-        className='poke-card'>
-        <h1>{name}</h1>
-        <img onClick={(e) => this.handleClick(e)} src={img}/>
-        {this.state.clicked && <p>Type: {type}</p>}
-        {this.state.clicked && <p>Speed: {speed}</p>}
-        {this.state.clicked && <p>Attack: {attack}</p>}
-        {this.state.clicked && <p>Defense: {defense}</p>}
-        {this.state.clicked && <p>HP: {hp}</p>}
-        <button onClick={() => addToPokemonTeam(img)}>Add</button>
+      <div className='poke-card'>
+        <h1 className='poke-card-name'>{name}</h1>
+        <div>
+          <img 
+            src={add}
+            className='poke-card-btn'
+            onClick={() => addToPokemonTeam(img)}/>
+          <img src={stats} 
+            className='poke-card-btn'
+            onClick={(e) => this.handleClick(e)}/>
+        </div>
+        <img  className='main-poke-img' src={img}/>
+        {this.state.clicked && <p className='stats'>Type: {type}</p>}
+        {this.state.clicked && <p className='stats'>Speed: {speed}</p>}
+        {this.state.clicked && <p className='stats'>Attack: {attack}</p>}
+        {this.state.clicked && <p className='stats'>Defense: {defense}</p>}
+        {this.state.clicked && <p className='stats'>HP: {hp}</p>}
       </div>
     )
   };

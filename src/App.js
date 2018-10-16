@@ -4,7 +4,7 @@ import pokemonData from './utilities/pokemonData'
 import TrainersSideBar from './components/trainersSideBar/TrainersSideBar'
 import { PokemonContainer } from './components/pokemonContainer/PokemonContainer'
 import { getTrainers, getPokemonTeams, postPokemonTeam } from './utilities/backendApiCalls/apiCalls'
-
+import { Header } from './components/header/header'
 
 class App extends Component {
   constructor() {
@@ -97,27 +97,32 @@ class App extends Component {
       pokemon_four: selectedPokemon[3],
       pokemon_five: selectedPokemon[4]
     }
-    console.log(newTeam)
     await postPokemonTeam(newTeam)
     await this.getTeams();
-   
+    
+    this.setState ({
+      selectedPokemon: []
+    })
   }
   
   render() {
     return (
-      <div>
+      <div className='full-page'>
         <TrainersSideBar trainers={this.state.trainers} trainersTeams={this.state.trainersTeams}/>
-        <PokemonContainer
-          pokemon={this.state.pokemon}
-          trainers={this.state.trainers}
-          selectedPokemon={this.state.selectedPokemon}
-          getCurrentTrainer={this.getCurrentTrainer}
-          addToPokemonTeam={this.addPokemonToTeam}
-          postTeam={this.postTeam}
-          deleteFromTeam={this.deleteFromTeam}
-          counter={this.state.counter}
-          increment={this.increment}
-          decrement={this.decrement}/>
+        <div className='main-section'>
+          <Header/>  
+          <PokemonContainer
+            pokemon={this.state.pokemon}
+            trainers={this.state.trainers}
+            selectedPokemon={this.state.selectedPokemon}
+            getCurrentTrainer={this.getCurrentTrainer}
+            addToPokemonTeam={this.addPokemonToTeam}
+            postTeam={this.postTeam}
+            deleteFromTeam={this.deleteFromTeam}
+            counter={this.state.counter}
+            increment={this.increment}
+            decrement={this.decrement}/>
+        </div>
       </div>
     );
   }
