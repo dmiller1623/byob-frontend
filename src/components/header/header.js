@@ -8,5 +8,4 @@ export const Header = () => {
       <img className='header-img' src={header}/>
     </div>
   )
-
 }
