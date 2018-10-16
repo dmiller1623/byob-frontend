@@ -8,10 +8,11 @@ class TrainersSideBar extends Component {
   };
 
   render() {
-    const { trainersTeams, trainers } = this.props;
+    const { trainersTeams, trainers, toggleAddTrainer, deleteTrainer, deletePokemonTeam } = this.props;
     return(
       <div className='side-bar'>
       <img className='trainer-header' src={Trainers} />
+      <button onClick={toggleAddTrainer}>Add Trainer</button>
       <div>
         {trainers.map((trainer, index) => {
           const foundTeams = trainersTeams.filter((team, index) => {
@@ -21,6 +22,7 @@ class TrainersSideBar extends Component {
           <div className='name-header'>
             <h2>Name: <span>{trainer.name}</span></h2>
             <h2>Level: <span>{trainer.level}</span></h2>
+            <button onClick={() => deleteTrainer(trainer.id)}>delete</button>
           </div>
             {foundTeams.map((pokemon) => {
               return <div>
@@ -29,6 +31,7 @@ class TrainersSideBar extends Component {
                 <img className='sidebar-images' src={pokemon.pokemon_three}/>
                 <img className='sidebar-images' src={pokemon.pokemon_four}/>
                 <img className='sidebar-images' src={pokemon.pokemon_five}/>
+                <button onClick={() => deletePokemonTeam(pokemon.id)}>X</button>
               </div>
             })}
           </div>

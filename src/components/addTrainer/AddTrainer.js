@@ -30,6 +30,7 @@ class AddTrainer extends Component {
           value={this.state.name}
         />
         <button onClick={this.handleSubmit}>Add trainer</button>
+        <button onClick={this.props.toggleAddTrainer}>Go Back</button>
       </div>
     )
   }

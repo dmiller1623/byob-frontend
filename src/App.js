@@ -3,7 +3,7 @@ import './App.css';
 import pokemonData from './utilities/pokemonData'
 import TrainersSideBar from './components/trainersSideBar/TrainersSideBar'
 import { PokemonContainer } from './components/pokemonContainer/PokemonContainer'
-import { getTrainers, getPokemonTeams, postPokemonTeam, postTrainer } from './utilities/backendApiCalls/apiCalls'
+import { getTrainers, getPokemonTeams, postPokemonTeam, postTrainer, removeTrainer, removePokemonTeam } from './utilities/backendApiCalls/apiCalls'
 import { Header } from './components/header/header'
 import AddTrainer from './components/addTrainer/AddTrainer'
 
@@ -17,7 +17,7 @@ class App extends Component {
       trainersTeams: [],
       trainers: [],
       currentTrainer: {},
-      addTrainer: true
+      addTrainer: false
     }
   };
 
@@ -108,24 +108,45 @@ class App extends Component {
   }
 
   addTrainer = async (trainer) => {
+    if(!trainer.name) return 
+
     await postTrainer(trainer);
     this.getTrainers();
+    this.toggleAddTrainer();
+  }
+  
+  toggleAddTrainer = () => {
+    let addTrainer = !this.state.addTrainer
+    this.setState({
+      addTrainer
+    })
+  }
+
+  deleteTrainer = async (trainerId) => {
+    await removeTrainer(trainerId);
+    this.getTrainers();
+  }
+
+  deletePokemonTeam = async (teamId) => {
+    await removePokemonTeam(teamId);
+    this.getTeams();
   }
   
   render() {
     if(this.state.addTrainer) {
       return (
         <div className='full-page'>
-          <TrainersSideBar trainers={this.state.trainers} trainersTeams={this.state.trainersTeams}/>
+          <TrainersSideBar trainers={this.state.trainers} trainersTeams={this.state.trainersTeams} deleteTrainer={this.deleteTrainer} deletePokemonTeam={this.deletePokemonTeam}/>
           <div className='main-section'>
-            <AddTrainer addTrainer={this.addTrainer}/>
+            <Header />
+            <AddTrainer addTrainer={this.addTrainer} toggleAddTrainer={this.toggleAddTrainer}/>
           </div>  
         </div>
       )
     } else {
       return (
         <div className='full-page'>
-          <TrainersSideBar trainers={this.state.trainers} trainersTeams={this.state.trainersTeams}/>
+          <TrainersSideBar trainers={this.state.trainers} trainersTeams={this.state.trainersTeams} toggleAddTrainer={this.toggleAddTrainer} deleteTrainer={this.deleteTrainer} deletePokemonTeam={this.deletePokemonTeam}/>
           <div className='main-section'>
             <Header/>  
             <PokemonContainer
