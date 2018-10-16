@@ -29,9 +29,22 @@ export const postPokemonTeam = async (team) => {
       },
       body: JSON.stringify(team)
     })
-    console.log(response)
-  }
-  catch(error) {
+  } catch(error) {
     throw new Error(error.message)
   }
 } 
+
+export const postTrainer = async (trainer) => {
+  try {
+    const response = await fetch('http://localhost:3000/api/v1/trainers', {
+      method: "POST",
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(trainer)
+    })
+
+  } catch(error) {
+    throw new Error(error.message)
+  }
+}
