@@ -26,11 +26,11 @@ class TrainersSideBar extends Component {
           </div>
             {foundTeams.map((pokemon) => {
               return <div>
-                <img className='sidebar-images' src={pokemon.pokemon_one}/>
-                <img className='sidebar-images' src={pokemon.pokemon_two}/>
-                <img className='sidebar-images' src={pokemon.pokemon_three}/>
-                <img className='sidebar-images' src={pokemon.pokemon_four}/>
-                <img className='sidebar-images' src={pokemon.pokemon_five}/>
+                <img className='sidebar-images' alt='pokemon image' src={pokemon.pokemon_one}/>
+                <img className='sidebar-images' alt='pokemon image' src={pokemon.pokemon_two}/>
+                <img className='sidebar-images' alt='pokemon image' src={pokemon.pokemon_three}/>
+                <img className='sidebar-images' alt='pokemon image' src={pokemon.pokemon_four}/>
+                <img className='sidebar-images' alt='pokemon image' src={pokemon.pokemon_five}/>
                 <button onClick={() => deletePokemonTeam(pokemon.id)}>X</button>
               </div>
             })}

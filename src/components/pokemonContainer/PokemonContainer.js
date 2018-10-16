@@ -28,13 +28,13 @@ export const PokemonContainer = ({
   return(
     <div className='poke-container'>
       <div className='poke-card-container'>
-        <img  className='carousel' src={leftArrow} onClick={() => decrement()}/>
+        <img  alt='left button' className='carousel' src={leftArrow} onClick={() => decrement()}/>
         {displayPokemon[counter]}
-        <img  className='carousel' src={rightArrow} onClick={() => increment()}/>
+        <img  alt='right button' className='carousel' src={rightArrow} onClick={() => increment()}/>
       </div>
       <div className='add-poke-section'>
         <select className='add-poke-buttons' onChange={(e) => getCurrentTrainer(e)}>
-          <option selected>Choose Trainer</option>
+          <option>Choose Trainer</option>
           {trainers.map(trainer => {
             return <option key={trainer.id} value={trainer.name}>{trainer.name}</option>
           })}

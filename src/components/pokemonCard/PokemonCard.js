@@ -26,15 +26,16 @@ class Pokemoncard extends Component {
       <div className='poke-card'>
         <h1 className='poke-card-name'>{name}</h1>
         <div>
-          <img 
+          <img
+            alt='left click button' 
             src={add}
             className='poke-card-btn'
             onClick={() => addToPokemonTeam(img)}/>
-          <img src={stats} 
+          <img alt='right click button' src={stats} 
             className='poke-card-btn'
             onClick={(e) => this.handleClick(e)}/>
         </div>
-        <img  className='main-poke-img' src={img}/>
+        <img alt='main pokemon image' className='main-poke-img' src={img}/>
         {this.state.clicked && <p className='stats'>Type: {type}</p>}
         {this.state.clicked && <p className='stats'>Speed: {speed}</p>}
         {this.state.clicked && <p className='stats'>Attack: {attack}</p>}

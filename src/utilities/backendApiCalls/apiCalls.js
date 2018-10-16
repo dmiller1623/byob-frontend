@@ -22,7 +22,7 @@ export const getPokemonTeams = async () => {
 
 export const postPokemonTeam = async (team) => {
   try {
-    const response = await fetch('http://localhost:3000/api/v1/pokemon', {
+    await fetch('http://localhost:3000/api/v1/pokemon', {
       method: "POST",
       headers: {
         'Content-type': 'application/json'
@@ -36,7 +36,7 @@ export const postPokemonTeam = async (team) => {
 
 export const postTrainer = async (trainer) => {
   try {
-    const response = await fetch('http://localhost:3000/api/v1/trainers', {
+    await fetch('http://localhost:3000/api/v1/trainers', {
       method: "POST",
       headers: {
         'Content-type': 'application/json'
@@ -51,7 +51,7 @@ export const postTrainer = async (trainer) => {
 
 export const removeTrainer = async (trainerId) => {
   try {
-    const response = await fetch(`http://localhost:3000/api/v1/trainers/${trainerId}`, {
+    await fetch(`http://localhost:3000/api/v1/trainers/${trainerId}`, {
       method: 'DElETE',
     })
   } catch(error) {
@@ -61,7 +61,7 @@ export const removeTrainer = async (trainerId) => {
 
 export const removePokemonTeam = async (teamId) => {
   try {
-    const response = await fetch(`http://localhost:3000/api/v1/pokemon/${teamId}`, {
+    await fetch(`http://localhost:3000/api/v1/pokemon/${teamId}`, {
       method: 'DElETE',
     })
   } catch(error) {
