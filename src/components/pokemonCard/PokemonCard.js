@@ -18,19 +18,19 @@ class Pokemoncard extends Component {
   }
 
   render () {
-    const { name, type, img, speed, attack, defense, hp } = this.props;
+    const { name, type, img, speed, attack, defense, hp, addToPokemonTeam } = this.props;
 
     return(
-      <div
-        onClick={(e) => this.handleClick(e)} 
+      <div 
         className='poke-card'>
         <h1>{name}</h1>
-        <img src={img}/>
+        <img onClick={(e) => this.handleClick(e)} src={img}/>
         {this.state.clicked && <p>Type: {type}</p>}
         {this.state.clicked && <p>Speed: {speed}</p>}
         {this.state.clicked && <p>Attack: {attack}</p>}
         {this.state.clicked && <p>Defense: {defense}</p>}
         {this.state.clicked && <p>HP: {hp}</p>}
+        <button onClick={() => addToPokemonTeam(img)}>Add</button>
       </div>
     )
   };

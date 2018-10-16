@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       pokemon: pokemonData,
       counter: 0, 
-      
+      selectedPokemon: []
     }
   };
 
@@ -34,6 +34,25 @@ class App extends Component {
       counter
     })
   }
+
+  addPokemonToTeam = (img) => {
+    const selectedPokemon = this.state.selectedPokemon;
+    if (selectedPokemon.length !== 5) {
+      selectedPokemon.push(img);
+      this.setState({
+        selectedPokemon
+      })
+    }; 
+  };
+
+  deleteFromTeam = (i) => {
+    const selectedPokemon = this.state.selectedPokemon;
+    selectedPokemon.splice(i, 1)
+
+    this.setState({
+      selectedPokemon
+    })
+  }
   
 
   render() {
@@ -42,6 +61,9 @@ class App extends Component {
         <TrainersSideBar />
         <PokemonContainer
           pokemon={this.state.pokemon}
+          selectedPokemon={this.state.selectedPokemon}
+          addToPokemonTeam={this.addPokemonToTeam}
+          deleteFromTeam={this.deleteFromTeam}
           counter={this.state.counter}
           increment={this.increment}
           decrement={this.decrement}/>
