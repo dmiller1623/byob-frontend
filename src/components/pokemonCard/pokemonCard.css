@@ -9,13 +9,13 @@
 .poke-card-name {
   color: #193358;
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 1rem 0 1rem 0;
 }
 
 .main-poke-img {
-  height: 15rem;
-  width: 15rem;
+  height: 10.8rem;
+  width: 10.8rem;
 }
 
 .stats {
@@ -26,5 +26,4 @@
 
 .poke-card-btn {
   cursor: pointer;
-  /* width: 3rem; */
 }

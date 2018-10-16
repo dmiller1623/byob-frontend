@@ -5,7 +5,7 @@ import header from '../../images/header.png'
 export const Header = () => {
   return (
     <div className='header'>
-      <img src={header}/>
+      <img className='header-img' src={header}/>
     </div>
   )
 
