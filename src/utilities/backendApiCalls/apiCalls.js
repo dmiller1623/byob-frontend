@@ -48,3 +48,23 @@ export const postTrainer = async (trainer) => {
     throw new Error(error.message)
   }
 }
+
+export const removeTrainer = async (trainerId) => {
+  try {
+    const response = await fetch(`http://localhost:3000/api/v1/trainers/${trainerId}`, {
+      method: 'DElETE',
+    })
+  } catch(error) {
+    throw new Error(error.message)
+  }
+}
+
+export const removePokemonTeam = async (teamId) => {
+  try {
+    const response = await fetch(`http://localhost:3000/api/v1/pokemon/${teamId}`, {
+      method: 'DElETE',
+    })
+  } catch(error) {
+    throw new Error(error.message)
+  }
+}
