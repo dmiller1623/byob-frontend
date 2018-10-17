@@ -1,0 +1,46 @@
+.add-trainer-input {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  margin-top: 8rem;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.image-section {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.trainer-input {
+  margin: .4rem;
+  font-size: 2rem;
+  height: 3rem;
+  width: 20rem;
+}
+
+.trainer-image {
+  margin-bottom: 5rem;
+  height: 20rem;
+  width: 20rem;
+}
+
+.add-trainer-buttons {
+  background-color: transparent;
+  margin: .4rem;
+  width: 20.4rem;
+  border-radius: 50px;
+  height: 2.4rem;
+  font-size: 1.8rem;
+}
