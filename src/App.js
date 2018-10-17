@@ -29,14 +29,30 @@ class App extends Component {
   };
 
   getTrainers = async () => {
-    const trainers = await getTrainers();
+    let trainers = await getTrainers();
+
+    if (!trainers.length) {
+      this.setState({
+        trainers: []
+      });
+      return;
+    }
+
     this.setState({
       trainers
     });
   }
 
   getTeams = async () => {
-    const trainersTeams = await getPokemonTeams();
+    let trainersTeams = await getPokemonTeams();
+
+    if (!trainersTeams.length) {
+      this.setState({
+        trainersTeams: []
+      });
+      return;
+    }
+
     this.setState({
       trainersTeams
     });
