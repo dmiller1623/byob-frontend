@@ -139,7 +139,9 @@ class App extends Component {
           <TrainersSideBar trainers={this.state.trainers} trainersTeams={this.state.trainersTeams} deleteTrainer={this.deleteTrainer} deletePokemonTeam={this.deletePokemonTeam}/>
           <div className='main-section'>
             <Header />
-            <AddTrainer addTrainer={this.addTrainer} toggleAddTrainer={this.toggleAddTrainer}/>
+            <div className='trainer-input-section'>
+              <AddTrainer addTrainer={this.addTrainer} toggleAddTrainer={this.toggleAddTrainer}/> 
+            </div>
           </div>  
         </div>
       )

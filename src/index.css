@@ -22,3 +22,11 @@ code {
   height: 100vh;
   background-color: #ff262f;
 }
+
+.trainer-input-section {
+  display: flex;
+  width: 100%;
+  background-color: #ff262f;
+  align-items: center;
+  justify-content: center;
+}
