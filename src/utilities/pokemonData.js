@@ -1478,7 +1478,7 @@ const pokemon = [
     defense: 95
   },
   {
-    name: 'Mewtwo',
+    name: 'Mewtwos',
     type: 'psychic',
     img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
     hp: 106,
