@@ -50,7 +50,7 @@ export const PokemonContainer = ({
           </div>;
         })}
       </div>
-      <p className='remove-tag'>Click Icons to Remove</p>
+      {selectedPokemon.length ?  <p className='remove-tag'>Click Icons to Remove</p> : <p></p>}
     </div>
   );
 };

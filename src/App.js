@@ -51,7 +51,11 @@ class App extends Component {
   decrement = () => {
     let counter = this.state.counter;
 
-    if (counter !== 0) counter -= 1;
+    if (counter === 0) {
+      counter = 149
+    } else {
+      counter -= 1
+    }
 
     this.setState({
       counter
@@ -61,7 +65,11 @@ class App extends Component {
   increment = () => {
     let counter = this.state.counter;
 
-    if (counter !== 149) counter++;
+    if (counter === 149) {
+      counter = 0
+    } else {
+      counter++;
+    }
 
     this.setState({
       counter
@@ -90,8 +98,9 @@ class App extends Component {
   getCurrentTrainer = (event) => {
     let trainerName = event.target.value;  
     let foundTrainer = this.state.trainers.find(trainer => trainer.name === trainerName);
+
     this.setState({
-      currentTrainer: foundTrainer
+      currentTrainer: foundTrainer || {}
     }); 
   }
 
