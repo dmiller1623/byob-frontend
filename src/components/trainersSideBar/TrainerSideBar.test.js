@@ -4,11 +4,8 @@ import TrainersSideBar from './trainersSideBar.js';
 
 describe('TrainerSideBar', () => {
   let wrapper;
-  let trainersTeamsMock = []
-  let trainersMock =[]
-  let deleteTrainerMock
-  let toggleAddTrainerMock
-  let deletePokemonTeamMock
+  let trainersTeamsMock = [];
+  let trainersMock =[];
 
   it('should match the snapshot', () => {
     wrapper = shallow(<TrainersSideBar trainers={trainersMock} trainersTeam={trainersTeamsMock}/>);
