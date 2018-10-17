@@ -932,7 +932,7 @@ const pokemon = [
   },
 
   {
-    name: 'Mew',
+    name: 'Mews',
     type: 'psychic',
     img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png"
   }
