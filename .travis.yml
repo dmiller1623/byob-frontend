@@ -1,8 +1,13 @@
 language: node_js
 node_js:
-  - "node"
+- node
 script:
-  - npm test
-  - npm run build
+- npm test
+- npm run build
 notifications:
   email: false
+deploy:
+  provider: heroku
+  api_key:
+    secure: B6rjQ04rsEklXPv6jdxwUF//PxBiyLJi20M73JPsezjbLmAQzhIMNKoQ7AhDg8nbYV3Wl05kdG5AWdtfaDIUAdf9vj+ZKTPGvKwMT5SvTCvzD6REMQ05qvAjfYiNlgt3QTidnqlC0A+SEcUvJpxdeVOXIbVUbvs43NwWuaUScPjeWEqscHG8LNR7U7sdP5Ww8HyYYOWSmI2rPhj7BqGLMQ1hbqxuwkzbp+tFIFGOXbsEG8ImF8+B1uez6qgP6e8JaS+uzT4/+usqROU6NMCk+BYs0+b08FZMGDUNy63hySolOLxPuRvZaEIbd2Db73y7vnJeyXrccBKsZcxOzEIDTR89DFeAkugOoYoT2kXiFiE53ReSpbwgD2R6YyRjJ9whTr8W9nOHh+NUTJAsQlcHmCnuBISFO/JLXD9n93FKIXTRQNO66kjwOJHkfJn3w6TFA7m6zpbo4ImDV3vikFhc4pFvcN8dGDLaPTLclFFrE5cOB1ArOzgJDERdREh2Rtu815+mzypDbDdwBWl740MYePM0zU7PM4sMviT6bgGwZtkINl8ZpdTs66kRu8QwnXB31aer6EK0gT/iz8ht1DTtdBdI72WH8U7dXnoR8bLBjkJQCBOnCZ5ozq86wt8BtGS+2MyowT28r5cHBrlfbiBLOmdBywsdi5j2qOgktH6HchU=
+  app: byopokemons
