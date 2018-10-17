@@ -97,7 +97,7 @@ class App extends Component {
 
   postTeam = async () => {
     let selectedPokemon = this.state.selectedPokemon;
-    if (selectedPokemon.length < 5) return;
+    if (selectedPokemon.length < 5 || !this.state.currentTrainer.id) return;
 
     let newTeam = {
       trainer_id: this.state.currentTrainer.id,
