@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import pokemonData from './utilities/pokemonData'
-import TrainersSideBar from './components/trainersSideBar/TrainersSideBar'
-import { PokemonContainer } from './components/pokemonContainer/PokemonContainer'
-import { getTrainers, getPokemonTeams, postPokemonTeam, postTrainer, removeTrainer, removePokemonTeam } from './utilities/backendApiCalls/apiCalls'
-import { Header } from './components/header/header'
+import pokemonData from './utilities/pokemonData';
+import TrainersSideBar from './components/trainersSideBar/TrainersSideBar';
+import { PokemonContainer } from './components/pokemonContainer/PokemonContainer';
+import { getTrainers, getPokemonTeams, postPokemonTeam, postTrainer, removeTrainer, removePokemonTeam } from './utilities/backendApiCalls/apiCalls';
+import { Header } from './components/header/header';
 import AddTrainer from './components/addTrainer/AddTrainer';
+import PropTypes from 'prop-types';
+
 
 class App extends Component {
   constructor() {
@@ -18,8 +20,8 @@ class App extends Component {
       trainers: [],
       currentTrainer: {},
       addTrainer: false
-    }
-  };
+    };
+  }
 
   componentDidMount = () => {
     this.getTrainers();
@@ -37,27 +39,27 @@ class App extends Component {
     const trainersTeams = await getPokemonTeams();
     this.setState({
       trainersTeams
-    })
+    });
   }
 
   decrement = () => {
-    let counter = this.state.counter
+    let counter = this.state.counter;
 
-    if(counter !== 0) counter -= 1
+    if (counter !== 0) counter -= 1;
 
     this.setState({
       counter
-    })
+    });
   }
 
   increment = () => {
-    let counter = this.state.counter
+    let counter = this.state.counter;
 
-    if(counter !== 149) counter++
+    if (counter !== 149) counter++;
 
     this.setState({
       counter
-    })
+    });
   }
 
   addPokemonToTeam = (img) => {
@@ -66,30 +68,30 @@ class App extends Component {
       selectedPokemon.push(img);
       this.setState({
         selectedPokemon
-      })
-    }; 
+      });
+    } 
   };
 
-  deleteFromTeam = (i) => {
+  deleteFromTeam = (ind) => {
     const selectedPokemon = this.state.selectedPokemon;
-    selectedPokemon.splice(i, 1)
+    selectedPokemon.splice(ind, 1);
 
     this.setState({
       selectedPokemon
-    })
+    });
   }
 
-  getCurrentTrainer = (e) => {
-    let trainerName = e.target.value;  
-    let foundTrainer = this.state.trainers.find(trainer => trainer.name === trainerName)
+  getCurrentTrainer = (event) => {
+    let trainerName = event.target.value;  
+    let foundTrainer = this.state.trainers.find(trainer => trainer.name === trainerName);
     this.setState({
       currentTrainer: foundTrainer
-    }) 
+    }); 
   }
 
   postTeam = async () => {
-    let selectedPokemon = this.state.selectedPokemon
-    if (selectedPokemon.length < 5) return
+    let selectedPokemon = this.state.selectedPokemon;
+    if (selectedPokemon.length < 5) return;
 
     let newTeam = {
       trainer_id: this.state.currentTrainer.id,
@@ -98,17 +100,17 @@ class App extends Component {
       pokemon_three: selectedPokemon[2],
       pokemon_four: selectedPokemon[3],
       pokemon_five: selectedPokemon[4]
-    }
-    await postPokemonTeam(newTeam)
+    };
+    await postPokemonTeam(newTeam);
     await this.getTeams();
     
-    this.setState ({
+    this.setState({
       selectedPokemon: []
-    })
+    });
   }
 
   addTrainer = async (trainer) => {
-    if(!trainer.name) return 
+    if (!trainer.name) return; 
 
     await postTrainer(trainer);
     this.getTrainers();
@@ -116,10 +118,10 @@ class App extends Component {
   }
   
   toggleAddTrainer = () => {
-    let addTrainer = !this.state.addTrainer
+    let addTrainer = !this.state.addTrainer;
     this.setState({
       addTrainer
-    })
+    });
   }
 
   deleteTrainer = async (trainerId) => {
@@ -133,7 +135,7 @@ class App extends Component {
   }
   
   render() {
-    if(this.state.addTrainer) {
+    if (this.state.addTrainer) {
       return (
         <div className='full-page'>
           <TrainersSideBar trainers={this.state.trainers} trainersTeams={this.state.trainersTeams} deleteTrainer={this.deleteTrainer} deletePokemonTeam={this.deletePokemonTeam}/>
@@ -144,7 +146,7 @@ class App extends Component {
             </div>
           </div>  
         </div>
-      )
+      );
     } else {
       return (
         <div className='full-page'>
@@ -168,5 +170,18 @@ class App extends Component {
     }
   }
 }
+
+PokemonContainer.propTypes = {
+  pokemon: PropTypes.array,
+  counter: PropTypes.number,
+  increment: PropTypes.func,
+  decrement: PropTypes.func,
+  selectedPokemon: PropTypes.array,
+  addPokemonToTeam: PropTypes.func,
+  deleteFromTeam: PropTypes.func,
+  trainers: PropTypes.array,
+  postTeam: PropTypes.func,
+  getCurrentTrainer: PropTypes.func
+};
 
 export default App;

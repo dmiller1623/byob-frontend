@@ -1,11 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme'; 
-import { Header } from './header.js';
+import AddTrainer from './AddTrainer.js';
 
-describe('header', () => {
-  let wrapper;
+describe('AddTrainer', () => {
+  let wrapper
+ 
   it('should match the snapshot', () => {
-    wrapper = shallow(<Header />);
+    wrapper = shallow(<AddTrainer />);
     expect(wrapper).toMatchSnapshot();
   });
-});  
+});
