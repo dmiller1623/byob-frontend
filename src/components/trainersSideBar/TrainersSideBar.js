@@ -25,7 +25,7 @@ class TrainersSideBar extends Component {
               <div className='name-header'>
                 <h2>Name: <span>{trainer.name}</span></h2>
                 <h2>Level: <span>{trainer.level}</span></h2>
-                <img className='delete-buttons' src={Delete} onClick={() => deleteTrainer(trainer.id)}/>
+                <img className='delete-buttons' alt='delete button' src={Delete} onClick={() => deleteTrainer(trainer.id)}/>
               </div>
               {foundTeams.map((pokemon, index) => {
                 return <div key={index} className='team-display'>
