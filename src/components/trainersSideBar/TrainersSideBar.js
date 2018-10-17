@@ -6,9 +6,6 @@ import PropTypes from 'prop-types';
 
 
 class TrainersSideBar extends Component {
-  constructor() {
-    super();
-  }
 
   render() {
     const { trainersTeams, trainers, toggleAddTrainer, deleteTrainer, deletePokemonTeam } = this.props;
