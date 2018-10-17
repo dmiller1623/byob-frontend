@@ -58,11 +58,7 @@ ShallowWrapper {
         <div
           className="main-team-display"
         />,
-        <p
-          className="remove-tag"
-        >
-          Click Icons to Remove
-        </p>,
+        <p />,
       ],
       "className": "poke-container",
     },
@@ -210,12 +206,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
-        "props": Object {
-          "children": "Click Icons to Remove",
-          "className": "remove-tag",
-        },
+        "props": Object {},
         "ref": null,
-        "rendered": "Click Icons to Remove",
+        "rendered": null,
         "type": "p",
       },
     ],
@@ -264,11 +257,7 @@ ShallowWrapper {
           <div
             className="main-team-display"
           />,
-          <p
-            className="remove-tag"
-          >
-            Click Icons to Remove
-          </p>,
+          <p />,
         ],
         "className": "poke-container",
       },
@@ -416,12 +405,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
-          "props": Object {
-            "children": "Click Icons to Remove",
-            "className": "remove-tag",
-          },
+          "props": Object {},
           "ref": null,
-          "rendered": "Click Icons to Remove",
+          "rendered": null,
           "type": "p",
         },
       ],
