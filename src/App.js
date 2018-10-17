@@ -31,12 +31,7 @@ class App extends Component {
   getTrainers = async () => {
     let trainers = await getTrainers();
 
-    if (!trainers.length) {
-      this.setState({
-        trainers: []
-      });
-      return;
-    }
+    if (!trainers.length) trainers = []
 
     this.setState({
       trainers
@@ -46,13 +41,8 @@ class App extends Component {
   getTeams = async () => {
     let trainersTeams = await getPokemonTeams();
 
-    if (!trainersTeams.length) {
-      this.setState({
-        trainersTeams: []
-      });
-      return;
-    }
-
+    if (!trainersTeams.length) trainersTeams = []
+  
     this.setState({
       trainersTeams
     });
