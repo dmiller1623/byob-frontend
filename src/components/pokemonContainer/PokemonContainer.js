@@ -44,7 +44,7 @@ export const PokemonContainer = ({
       <div className='main-team-display'>
         {selectedPokemon.map((pokemon, index) => {
           return <div>
-            <img className='selected-poke' key={index} onClick={() => deleteFromTeam(index)} src={pokemon}/>
+            <img className='selected-poke' alt='selected pokemon' key={index} onClick={() => deleteFromTeam(index)} src={pokemon}/>
           </div>
         })}
       </div>

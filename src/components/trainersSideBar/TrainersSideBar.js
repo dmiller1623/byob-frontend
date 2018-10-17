@@ -11,7 +11,7 @@ class TrainersSideBar extends Component {
     const { trainersTeams, trainers, toggleAddTrainer, deleteTrainer, deletePokemonTeam } = this.props;
     return(
       <div className='side-bar'>
-      <img className='trainer-header' src={Trainers} />
+      <img className='trainer-header' alt='trainer title' src={Trainers} />
       <button onClick={toggleAddTrainer}>Add Trainer</button>
       <div>
         {trainers.map((trainer, index) => {
@@ -26,11 +26,11 @@ class TrainersSideBar extends Component {
           </div>
             {foundTeams.map((pokemon) => {
               return <div>
-                <img className='sidebar-images' alt='pokemon image' src={pokemon.pokemon_one}/>
-                <img className='sidebar-images' alt='pokemon image' src={pokemon.pokemon_two}/>
-                <img className='sidebar-images' alt='pokemon image' src={pokemon.pokemon_three}/>
-                <img className='sidebar-images' alt='pokemon image' src={pokemon.pokemon_four}/>
-                <img className='sidebar-images' alt='pokemon image' src={pokemon.pokemon_five}/>
+                <img className='sidebar-images' alt='pokemon' src={pokemon.pokemon_one}/>
+                <img className='sidebar-images' alt='pokemon' src={pokemon.pokemon_two}/>
+                <img className='sidebar-images' alt='pokemon' src={pokemon.pokemon_three}/>
+                <img className='sidebar-images' alt='pokemon' src={pokemon.pokemon_four}/>
+                <img className='sidebar-images' alt='pokemon' src={pokemon.pokemon_five}/>
                 <button onClick={() => deletePokemonTeam(pokemon.id)}>X</button>
               </div>
             })}
