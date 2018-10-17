@@ -53,7 +53,7 @@ class App extends Component {
   increment = () => {
     let counter = this.state.counter
 
-    if(counter !== 9) counter++
+    if(counter !== 149) counter++
 
     this.setState({
       counter
