@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme'; 
-import TrainersSideBar from './trainersSideBar.js';
+import TrainersSideBar from './TrainersSideBar.js';
 
 describe('TrainerSideBar', () => {
   let wrapper;
