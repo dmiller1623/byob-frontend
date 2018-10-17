@@ -1,0 +1,449 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrainerSideBar should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PokemonContainer
+    pokemon={Array []}
+    selectedPokemon={Array []}
+    trainers={Array []}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="poke-card-container"
+        >
+          <img
+            alt="left button"
+            className="carousel"
+            onClick={[Function]}
+            src="left-arrow.svg"
+          />
+          <img
+            alt="right button"
+            className="carousel"
+            onClick={[Function]}
+            src="right-arrow.svg"
+          />
+        </div>,
+        <div
+          className="add-poke-section"
+        >
+          <select
+            className="add-poke-buttons"
+            onChange={[Function]}
+          >
+            <option>
+              Choose Trainer
+            </option>
+          </select>
+          <button
+            className="add-poke-buttons"
+          >
+            save team
+          </button>
+        </div>,
+        <div
+          className="main-team-display"
+        />,
+        <p
+          className="remove-tag"
+        >
+          Click Icons to Remove
+        </p>,
+      ],
+      "className": "poke-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="left button"
+              className="carousel"
+              onClick={[Function]}
+              src="left-arrow.svg"
+            />,
+            undefined,
+            <img
+              alt="right button"
+              className="carousel"
+              onClick={[Function]}
+              src="right-arrow.svg"
+            />,
+          ],
+          "className": "poke-card-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "left button",
+              "className": "carousel",
+              "onClick": [Function],
+              "src": "left-arrow.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          undefined,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "right button",
+              "className": "carousel",
+              "onClick": [Function],
+              "src": "right-arrow.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <select
+              className="add-poke-buttons"
+              onChange={[Function]}
+            >
+              <option>
+                Choose Trainer
+              </option>
+            </select>,
+            <button
+              className="add-poke-buttons"
+            >
+              save team
+            </button>,
+          ],
+          "className": "add-poke-section",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <option>
+                  Choose Trainer
+                </option>,
+                Array [],
+              ],
+              "className": "add-poke-buttons",
+              "onChange": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Choose Trainer",
+                },
+                "ref": null,
+                "rendered": "Choose Trainer",
+                "type": "option",
+              },
+            ],
+            "type": "select",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "save team",
+              "className": "add-poke-buttons",
+              "onClick": undefined,
+            },
+            "ref": null,
+            "rendered": "save team",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "className": "main-team-display",
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Click Icons to Remove",
+          "className": "remove-tag",
+        },
+        "ref": null,
+        "rendered": "Click Icons to Remove",
+        "type": "p",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="poke-card-container"
+          >
+            <img
+              alt="left button"
+              className="carousel"
+              onClick={[Function]}
+              src="left-arrow.svg"
+            />
+            <img
+              alt="right button"
+              className="carousel"
+              onClick={[Function]}
+              src="right-arrow.svg"
+            />
+          </div>,
+          <div
+            className="add-poke-section"
+          >
+            <select
+              className="add-poke-buttons"
+              onChange={[Function]}
+            >
+              <option>
+                Choose Trainer
+              </option>
+            </select>
+            <button
+              className="add-poke-buttons"
+            >
+              save team
+            </button>
+          </div>,
+          <div
+            className="main-team-display"
+          />,
+          <p
+            className="remove-tag"
+          >
+            Click Icons to Remove
+          </p>,
+        ],
+        "className": "poke-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="left button"
+                className="carousel"
+                onClick={[Function]}
+                src="left-arrow.svg"
+              />,
+              undefined,
+              <img
+                alt="right button"
+                className="carousel"
+                onClick={[Function]}
+                src="right-arrow.svg"
+              />,
+            ],
+            "className": "poke-card-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "left button",
+                "className": "carousel",
+                "onClick": [Function],
+                "src": "left-arrow.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "right button",
+                "className": "carousel",
+                "onClick": [Function],
+                "src": "right-arrow.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <select
+                className="add-poke-buttons"
+                onChange={[Function]}
+              >
+                <option>
+                  Choose Trainer
+                </option>
+              </select>,
+              <button
+                className="add-poke-buttons"
+              >
+                save team
+              </button>,
+            ],
+            "className": "add-poke-section",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <option>
+                    Choose Trainer
+                  </option>,
+                  Array [],
+                ],
+                "className": "add-poke-buttons",
+                "onChange": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Choose Trainer",
+                  },
+                  "ref": null,
+                  "rendered": "Choose Trainer",
+                  "type": "option",
+                },
+              ],
+              "type": "select",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "save team",
+                "className": "add-poke-buttons",
+                "onClick": undefined,
+              },
+              "ref": null,
+              "rendered": "save team",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [],
+            "className": "main-team-display",
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Click Icons to Remove",
+            "className": "remove-tag",
+          },
+          "ref": null,
+          "rendered": "Click Icons to Remove",
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

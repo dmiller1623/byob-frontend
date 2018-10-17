@@ -1,11 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme'; 
-import { Header } from './header.js';
+import PokemonCard from './PokemonCard.js';
 
-describe('header', () => {
-  let wrapper;
+describe('PokemonCard', () => {
+  let wrapper
+ 
   it('should match the snapshot', () => {
-    wrapper = shallow(<Header />);
+    wrapper = shallow(<PokemonCard />);
     expect(wrapper).toMatchSnapshot();
   });
-});  
+});
