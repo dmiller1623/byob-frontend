@@ -14,7 +14,7 @@ class TrainersSideBar extends Component {
         <img className='trainer-header' alt='trainer title' src={Trainers} />
         <button onClick={toggleAddTrainer}>Add Trainer</button>
         <div>
-          {trainers.map((trainer, index) => {
+          {trainers.length && trainersTeams.length && trainers.map((trainer, index) => {
             const foundTeams = trainersTeams.filter((team) => {
               return trainer.id === team.trainer_id;
             });
