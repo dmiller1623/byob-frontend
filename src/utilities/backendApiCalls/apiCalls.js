@@ -1,6 +1,6 @@
 export const getTrainers = async () => {
   try {
-    const response = await fetch(process.env.REACT_APP_DATABASE_API_URL + '/api/v1/trainers');
+    const response = await fetch('http://localhost:3000/api/v1/trainers');
     const trainers = await response.json();
     return trainers;
   } catch (error) {
@@ -10,7 +10,7 @@ export const getTrainers = async () => {
 
 export const getPokemonTeams = async () => {
   try {
-    const response = await fetch( process.env.REACT_APP_DATABASE_API_URL + '/api/v1/pokemon');
+    const response = await fetch('http://localhost:3000/api/v1/pokemon');
     const pokemon = await response.json();
     return pokemon;
   } catch (error) {
@@ -20,7 +20,7 @@ export const getPokemonTeams = async () => {
 
 export const postPokemonTeam = async (team) => {
   try {
-    await fetch(process.env.REACT_APP_DATABASE_API_URL + '/api/v1/pokemon', {
+    await fetch('http://localhost:3000/api/v1/pokemon', {
       method: "POST",
       headers: {
         'Content-type': 'application/json'
@@ -34,7 +34,7 @@ export const postPokemonTeam = async (team) => {
 
 export const postTrainer = async (trainer) => {
   try {
-    await fetch(process.env.REACT_APP_DATABASE_API_URL + '/api/v1/trainers', {
+    await fetch('http://localhost:3000/api/v1/trainers', {
       method: "POST",
       headers: {
         'Content-type': 'application/json'
@@ -49,7 +49,7 @@ export const postTrainer = async (trainer) => {
 
 export const removeTrainer = async (trainerId) => {
   try {
-    await fetch(process.env.REACT_APP_DATABASE_API_URL + `/api/v1/trainers/${trainerId}`, {
+    await fetch(`http://localhost:3000/api/v1/trainers/${trainerId}`, {
       method: 'DElETE'
     });
   } catch (error) {
@@ -59,7 +59,7 @@ export const removeTrainer = async (trainerId) => {
 
 export const removePokemonTeam = async (teamId) => {
   try {
-    await fetch(process.env.REACT_APP_DATABASE_API_URL + `/api/v1/pokemon/${teamId}`, {
+    await fetch(`http://localhost:3000/api/v1/pokemon/${teamId}`, {
       method: 'DElETE'
     });
   } catch (error) {

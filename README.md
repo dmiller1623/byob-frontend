@@ -24,6 +24,9 @@ A site user to build your ultimate Pokemon team. You can check out their stats a
    _ npm start and visit localhost:3001 in your browser
  
  ## ScreenShots
+
+ <img src='src/images/screenshot.png'>
+ <img src='src/images/screenshot2.png'>
  
  
  
