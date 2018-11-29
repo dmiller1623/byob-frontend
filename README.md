@@ -1,5 +1,5 @@
 # Byob-Frontend
-A site user to build your ultimate Pokemon team. You can check out their stats and compare the squads you built.
+A site to build your ultimate Pokemon team. You can check out their stats and compare the squads you built.
 
 ### Primary technologies used
 * Frontend 
